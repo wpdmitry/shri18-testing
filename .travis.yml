@@ -1,0 +1,12 @@
+sudo: false
+
+language: node_js
+
+node_js:
+  - 'node'
+  - 8
+
+script:
+  - tar -xf repo1.tar
+  - npm run lint
+  - npm run test
