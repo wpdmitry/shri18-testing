@@ -12,5 +12,4 @@ script:
   - npm run unit-test
   - npm install selenium-standalone -g
   - selenium-standalone install
-  - npm run start
   - npm run integration-test
