@@ -11,5 +11,5 @@ script:
   - npm run lint
   - npm run unit-test
   - npm install selenium-standalone -g
-  - selenium-strandalone install
+  - selenium-standalone install
   - npm run integration-test
