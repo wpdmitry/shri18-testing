@@ -10,4 +10,6 @@ script:
   - tar -xf repo1.tar
   - npm run lint
   - npm run unit-test
+  - npm selenium-standalone -g
+  - selenium-strandalone install
   - npm run integration-test
