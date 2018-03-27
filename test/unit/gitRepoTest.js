@@ -3,21 +3,19 @@ const gitRepo = require('../../models/gitRepo');
 const { expect, assert } = require('chai');
 
 describe('Тестирование gitRepo', () => {
-    it('Вовращает имена репозиториев', () => {
+    it('Должен вернуть имя репозитория repo1', () => {
         const gitRepo1 = new gitRepo(paths[0]);
-        const gitRepo2 = new gitRepo(paths[1]);
 
-        expect(gitRepo1.getNameRepo()).to.equal('repo1');
-        expect(gitRepo2.getNameRepo()).to.equal('repo2')
+        expect(gitRepo1.getNameRepo()).to.equal(paths[0].split('/').slice(-1)[0]);
     });
 
-    it('Возвращает ветки репозиториев', async() => {
+    it('Должен вернуть вернуть ветки (master, develop) репозитория repo1', async() => {
         const gitRepo1 = new gitRepo(paths[0]);
 
         assert.isArray(await gitRepo1.getBranches(), ['master', 'develop']);
     });
 
-    it('Переключает ветки', async() => {
+    it('Должен переключать вертки у репозитория repo1', async() => {
         const gitRepo1 = new gitRepo(paths[0]);
         const branches = await gitRepo1.getBranches();
 
