@@ -9,4 +9,7 @@ node_js:
 script:
   - tar -xf repo1.tar
   - npm run lint
-  - npm run test
+  - npm run unit-test
+  - npm install selenium-standalone -g
+  - selenium-standalone install
+  - npm run integration-test
