@@ -5,7 +5,7 @@ module.exports = {
     sets: {
         desktop: {
             files: './test/integration/hermione',
-            browsers: ['firefox' /*, 'chrome'*/]
+            browsers: ['firefox', 'chrome']
         }
     },
 

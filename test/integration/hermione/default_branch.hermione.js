@@ -48,17 +48,3 @@ describe('Отображение ветки по умолчанию', () => {
             })
     });
 });
-
-
-// describe('Работа с деревом файлов в ветке по умолчанию', () => {
-//     it('should ', async function () {
-//         const gitRepo1 = new gitRepo(paths[0]);
-//         const repoName = await gitRepo1.getNameRepo();
-//
-//         return this.browser
-//             .url('/')
-//             .click('.repos__item:first-child > a')
-//             .click(`[data-go="${repoName}/master/tree"]`)
-//
-//     });
-// });

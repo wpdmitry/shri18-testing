@@ -11,12 +11,7 @@ node_js:
 
 before_script:
   - tar -xf repo1.tar
-  - npm install selenium-standalone -g
-  - selenium-standalone install
 
 script:
   - npm run lint
   - npm run unit-test
-  - node server.js &
-  - selenium-standalone start &
-  - npm run integration-test
