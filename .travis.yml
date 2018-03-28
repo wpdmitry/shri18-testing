@@ -2,11 +2,16 @@ sudo: false
 
 language: node_js
 
+addons:
+  firefox: "17.0"
+
 node_js:
   - 'node'
   - 8
 
-script:
+before_script:
   - tar -xf repo1.tar
+
+script:
   - npm run lint
-  - npm run test
+  - npm run unit-test
