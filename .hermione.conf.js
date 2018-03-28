@@ -1,5 +1,5 @@
 module.exports = {
-    baseUrl: 'http://localhost:8005',
+    baseUrl: 'http://localhost:8006',
     gridUrl: 'http://0.0.0.0:4444/wd/hub',
 
     sets: {
