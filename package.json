@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "node server.js & selenium-standalone start",
     "develop": "gulp develop",
     "production": "gulp production",
     "lint": "eslint ./src/js/*.js",
