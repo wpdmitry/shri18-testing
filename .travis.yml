@@ -2,11 +2,21 @@ sudo: false
 
 language: node_js
 
+addons:
+  firefox: "17.0"
+
 node_js:
   - 'node'
   - 8
 
-script:
+before_script:
   - tar -xf repo1.tar
+  - npm install selenium-standalone -g
+  - selenium-standalone install
+
+script:
   - npm run lint
-  - npm run test
+  - npm run unit-test
+  - node server.js &
+  - selenium-standalone start &
+  - npm run integration-test
